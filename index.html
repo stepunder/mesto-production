@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Mesto</title>
-    <script type="module" crossorigin src="./assets/index-Ct2xw-An.js"></script>
+    <script type="module" crossorigin src="./assets/index-2LV_3X3V.js"></script>
     <link rel="stylesheet" crossorigin href="./assets/index-DNbS4tJ4.css">
   </head>
   <body class="page">
@@ -38,12 +38,12 @@
           <form class="popup__form" name="edit-profile" novalidate>
             <label class="popup__label">
               <input type="text" name="user-name" id="user-name" class="popup__input popup__input_type_name" placeholder="Имя" required minlength="2" maxlength="40" pattern="^[a-zA-Zа-яА-ЯёЁ\s\-]+$" data-error-message="Разрешены только латинские, кириллические буквы, знаки дефиса и пробелы" />
+              <span class="popup__error" id="user-name-error"></span>
             </label>
-            <span class="popup__error" id="user-name-error"></span>
             <label class="popup__label">
               <input type="text" name="user-description" id="user-description" class="popup__input popup__input_type_description" placeholder="Занятие" required minlength="2" maxlength="200" />
+              <span class="popup__error" id="user-description-error"></span>
             </label>
-            <span class="popup__error" id="user-description-error"></span>
             <button type="submit" class="button popup__button popup__button_disabled" disabled>Сохранить</button>
           </form>
         </div>
@@ -56,12 +56,12 @@
           <form class="popup__form" name="new-place" novalidate>
             <label class="popup__label">
               <input type="text" name="place-name" id="place-name" class="popup__input popup__input_type_card-name" placeholder="Название" required minlength="2" maxlength="30" pattern="^[a-zA-Zа-яА-ЯёЁ\s\-]+$" data-error-message="Разрешены только латинские, кириллические буквы, знаки дефиса и пробелы" />
+              <span class="popup__error" id="place-name-error"></span>
             </label>
-            <span class="popup__error" id="place-name-error"></span>
             <label class="popup__label">
               <input type="url" name="place-link" id="place-link" class="popup__input popup__input_type_url" placeholder="Ссылка на картинку" required />
+              <span class="popup__error" id="place-link-error"></span>
             </label>
-            <span class="popup__error" id="place-link-error"></span>
             <button type="submit" class="button popup__button popup__button_disabled" disabled>Создать</button>
           </form>
         </div>
@@ -82,8 +82,8 @@
           <form class="popup__form" name="edit-avatar" novalidate>
             <label class="popup__label">
               <input type="url" name="user-avatar" id="user-avatar" class="popup__input popup__input_type_avatar" placeholder="Ссылка на изображение" required />
+              <span class="popup__error" id="user-avatar-error"></span>
             </label>
-            <span class="popup__error" id="user-avatar-error"></span>
             <button type="submit" class="button popup__button popup__button_disabled" disabled>Сохранить</button>
           </form>
         </div>
@@ -92,25 +92,10 @@
       <div class="popup popup_type_info">
         <div class="popup__content popup__content_content_info">
           <button type="button" class="popup__close"></button>
-          <h3 class="popup__title"></h3>
-          <dl class="popup__info">
-            <div class="popup__info-item popup__info-item_type_title">
-              <dt class="popup__info-term">Название:</dt>
-              <dd class="popup__info-description"></dd>
-            </div>
-            <div class="popup__info-item popup__info-item_type_likes">
-              <dt class="popup__info-term">Нравится:</dt>
-              <dd class="popup__info-description"></dd>
-            </div>
-            <div class="popup__info-item popup__info-item_type_owner">
-              <dt class="popup__info-term">Владелец:</dt>
-              <dd class="popup__info-description"></dd>
-            </div>
-            <div class="popup__info-item popup__info-item_type_date">
-              <dt class="popup__info-term">Дата создания:</dt>
-              <dd class="popup__info-description"></dd>
-            </div>
-          </dl>
+          <h3 class="popup__title">Информация о карточке</h3>
+          <dl class="popup__info"></dl>
+          <h4 class="popup__text">Лайкнули:</h4>
+          <ul class="popup__list"></ul>
         </div>
       </div>
     </div>
